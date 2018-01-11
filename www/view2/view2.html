@@ -1,0 +1,11 @@
+        <form class="notification-form" ng-controller="View2Ctrl">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="G2 vs FaZe" ng-model="title" />
+            </div>
+            <div class="form-group">
+                <label for="message"></label>
+                <textarea class="form-control" rows="3" id="message" placeholder="Match is about to start" ng-model="text"></textarea>
+            </div>
+            <button type="button" class="show-button btn btn-primary" notification-title="title" notification-text="text">Show Notification</button>
+        </form>
