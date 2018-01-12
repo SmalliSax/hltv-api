@@ -1,11 +1,28 @@
-        <form class="notification-form" ng-controller="View2Ctrl">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" placeholder="G2 vs FaZe" ng-model="title" />
-            </div>
-            <div class="form-group">
-                <label for="message"></label>
-                <textarea class="form-control" rows="3" id="message" placeholder="Match is about to start" ng-model="text"></textarea>
-            </div>
-            <button type="button" class="show-button btn btn-primary" notification-title="title" notification-text="text">Show Notification</button>
-        </form>
+    
+   <script>
+ function autoRefresh1()
+{
+       window.location.reload();
+}
+ 
+ setInterval('autoRefresh1()', 10000); // this will reload page after every 5 secounds; Method II
+            </script>
+
+<div id="result">
+
+<div ng-repeat="matches in liveMatches">
+<div class="card" style="width: 19rem; margin: 0px 0px 10px 0px;" ng-repeat="match in matches.live">
+  <div class="card-block">
+    <p class="live">Live</p><a class="fa fa-circle icon" href="#"></a>
+    <div style="clear:both"></div>
+    <h4 class="card-title" style="text-align:center; font-size:17px;">{{match.event}}</h4>
+    <p class="card-text" style="text-align: center;"><strong>{{match.team1}}</strong> VS <strong>{{match.team2}}</strong></p>
+  </div>
+  <ul class="list-group list-group-flush" ng-repeat="map in match.maps">
+    <li class="list-group-item">Map: <strong>{{map.name}}</strong></li>
+    <li class="list-group-item">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+  </ul>
+</div>
+</div>
+
+</div>

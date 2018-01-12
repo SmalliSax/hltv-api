@@ -6,14 +6,14 @@
         id        = "com.phonegap.tothematch"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>ToTheMatch</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Stay up to date to upcoming and live CS:GO matches!
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+        DrSaxi
     </author>
 
     <!--

@@ -19,7 +19,7 @@ angular.module('myApp.view1', ['ngRoute', 'angular-web-notification'])
   }
 
 
-	$http.get("http://hltv-api.herokuapp.com/v1/matches?type=upcoming")
+	$http.get("http://hltv-api.herokuapp.com/v1/matches?filter=upcoming")
 	.success(function(response) {
 
 		$scope.details = response;
