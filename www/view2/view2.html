@@ -11,7 +11,7 @@
 <div id="result">
 
   <div ng-repeat="matches in liveMatches">
-    <div class="card" style="width: 20rem; margin: 0px 0px 10px 0px;" ng-repeat="match in matches.live">
+    <div class="card" style="width: 20rem; margin: 0 auto; margin-top: 20px;" ng-repeat="match in matches.live">
       <div class="card-block">
         <a class="fa fa-circle icon" href="#"></a><p class="live">Live</p>
         <div style="clear:both"></div>
@@ -19,10 +19,16 @@
         <p class="card-text" style="text-align: center; margin-bottom: 15px;"><strong>{{match.team1}}</strong> VS <strong>{{match.team2}}</strong></p>
       </div>
       <ul class="list-group list-group-flush" ng-repeat="map in match.maps">
-        <li class="list-group-item mapPreview" ng-if="map.name==='cbl'"><img ng-src="../components/img/maps/cobblestone.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
-        <li class="list-group-item mapPreview" ng-if="map.name==='inf'"><img ng-src="../components/img/maps/inferno.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
-        <li class="list-group-item mapPreview" ng-if="map.name==='trn'"><img ng-src="../components/img/maps/train.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
-        <li class="list-group-item mapPreview" ng-if="map.name==='nuke'"><img ng-src="../components/img/maps/nuke.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        <!-- Show images for different map pools -->
+        <li class="list-group-item mapPreview" ng-if="map.name==='cbl'"><img ng-src="cobblestone.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        <li class="list-group-item mapPreview" ng-if="map.name==='inf' || map.name ==='Inferno'"><img ng-src="inferno.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        <li class="list-group-item mapPreview" ng-if="map.name==='trn' || map.name==='Train'"><img ng-src="train.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        <li class="list-group-item mapPreview" ng-if="map.name==='nuke' || map.name==='Nuke'"><img ng-src="nuke.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        <li class="list-group-item mapPreview" ng-if="map.name==='mrg' || map.name==='Mirage'"><img ng-src="mirage.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        <li class="list-group-item mapPreview" ng-if="map.name==='cch' || map.name==='Cache'"><img ng-src="cache.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        <li class="list-group-item mapPreview" ng-if="map.name==='ovp' || map.name==='Overpass'"><img ng-src="overpass.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        <li class="list-group-item mapPreview" ng-if="map.name==='Cache'"><img ng-src="cache.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
+        
 
       </ul>
     </div>

@@ -1,4 +1,15 @@
 /* app css stylesheet */
+.iconExplanation {font-size: 10px;}
+.form-control {font-size: 15px!important;}
+a {
+    color: #ef405f!important;}
+footer {
+    position: fixed;
+    height: 75px;
+    bottom: 0;
+    width: 100%;
+    background-color: #181818;
+}
 
 .card-block {background-color: #212121;
   color: white;}
@@ -191,7 +202,7 @@
     .search { position: relative; }
     .search .fa-times { 
       position: absolute;
-      top: 10px;
-      font-size: 30px;
+     top: 6px;
+    font-size: 25px;
       right: 10px;
     }
