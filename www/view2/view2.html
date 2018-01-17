@@ -5,9 +5,13 @@
    window.location.reload();
  }
  
- setInterval('autoRefresh1()', 90000);
+ setInterval('autoRefresh1()', 120000);
 </script>
-
+</div>
+    <div class="loadingIcon" data-ng-show="loading">
+<i class="fa fa-spinner fa-pulse fa-fw fa-inverse"></i><br>
+<span class="loadingText">Fetching data...</span>
+</div>
 <div id="result">
 
   <div ng-repeat="matches in liveMatches">
@@ -27,11 +31,11 @@
         <li class="list-group-item mapPreview" ng-if="map.name==='mrg' || map.name==='Mirage'"><img ng-src="mirage.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
         <li class="list-group-item mapPreview" ng-if="map.name==='cch' || map.name==='Cache'"><img ng-src="cache.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
         <li class="list-group-item mapPreview" ng-if="map.name==='ovp' || map.name==='Overpass'"><img ng-src="overpass.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
-        <li class="list-group-item mapPreview" ng-if="map.name==='Cache'"><img ng-src="cache.png"/ alt="">{{match.team1}} <strong>{{map.team1_score}}</strong> -  <strong>{{map.team2_score}}</strong> {{match.team2}}</li>
         
 
       </ul>
     </div>
+    <div ng-if="details.count == '0'"><p class="noLiveMatches">• No live matches to display •<br><span>*This page refreshes every 2 minutes</span></p></div>
   </div>
 
 </div>

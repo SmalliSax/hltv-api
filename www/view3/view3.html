@@ -1,0 +1,26 @@
+ <div class="loadingIcon" data-ng-show="loading">
+<i class="fa fa-spinner fa-pulse fa-fw fa-inverse"></i><br>
+<span class="loadingText">Fetching data...</span>
+</div>
+<div class="table-responsive" ng-hide="loading">
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Event</th>
+      <th scope="col">Date</th>
+      <th scope="col">Map</th>
+      <th scope="col">Loss</th>
+      <th scope="col">Win</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat="allResults in resultMatches">
+    <tr ng-repeat="result in allResults">
+      <td>{{result.event}}</th>
+      <td>{{result.date | date:'dd/MM'}}</td>
+      <td>{{result.map}}</td>
+      <td class="teamLose">{{result.team1}} | {{result.score_lost}}</td>
+      <td class="teamWon">{{result.score_won}} | {{result.team2}}</td>
+    </tr>
+</tbody>
+</table>
+</div>

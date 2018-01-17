@@ -14,15 +14,26 @@
   <link rel="stylesheet" href="app.css">
   <link rel="stylesheet" href="components/css/bootstrap.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="components/js/marquee.js"></script>
+<!--   <script src="components/js/scroller.js"></script> -->
   <link rel="stylesheet" href="components/css/font-awesome.css">
 </head>
 <body style="background-color: #1b1b1b;">
-  
-<!--   <ul class="menu">
-    <li><a href="#!/view1">Upcoming Matches</a></li>
-    <li><a href="#!/view2">Live Matches</a></li>
-  </ul> -->
+  <nav class="navbar navbar-inverse navibar">
+  <div class="container" ng-controller="View1Ctrl">
+<div class="simple-marquee-container">
+  <div class="marquee-sibling">
+    <i class="fa fa-newspaper-o" aria-hidden="true"></i> HLTV News
+  </div>
+  <marquee class="newsMarquee" scrollamount="5" ng-repeat="foo in allNews">
+      <p class="newsTicker" ng-repeat="news in foo">
+          {{news.title}}<span class="divider">•</span>
+      </p> 
+</marquee>
+  </div>
+</div><!--Controller div ends -->
+</nav>
 
   <div class="container-fluid">
   <div ng-view></div>
@@ -63,6 +74,7 @@
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
+  <script src="view3/view3.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

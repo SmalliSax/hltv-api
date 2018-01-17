@@ -11,31 +11,39 @@ angular.module('myApp.view1', ['ngRoute', 'angular-web-notification'])
 
 .controller('View1Ctrl', ['$scope','$http', function ($scope, $http) {
 
- $scope.getDetails = function (index, matches) {
-    console.log("You clicked: " + matches.event); // this works fine.
-    $scope.myChoice = event; // ReferenceError: myChoice is not defined
 
-    console.log($scope.myChoice);
-  }
-
-
-	$http.get("http://hltv-api.herokuapp.com/v1/matches?filter=upcoming")
+  $scope.loading = true;
+	$http.get("https://www.hltv-api.com/v1/matches?filter=upcoming")
 	.success(function(response) {
 
 		$scope.details = response;
 
 		//Inititate empty array
 		$scope.allMatches = [];
-
+		$scope.loading = false;
 		//Loop through the JSON data response
 		angular.forEach($scope.details, function(item){
 			$scope.allMatches.push(item);
 			console.log($scope.allMatches)
 		})
-
 	});
 
 
+			$http.get("https://www.hltv-api.com/v1/news?limit=5")
+	.success(function(response) {
+
+		$scope.details = response;
+
+		//Inititate empty array
+		$scope.allNews = [];
+		//Loop through the JSON data response
+		angular.forEach($scope.details, function(item){
+			$scope.allNews.push(item);
+			console.log($scope.allNews)
+		})
+
+
+	});
 
 }]);
 

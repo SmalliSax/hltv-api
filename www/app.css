@@ -1,29 +1,138 @@
 /* app css stylesheet */
-.iconExplanation {font-size: 10px;}
-.form-control {font-size: 15px!important;}
-a {
-    color: #ef405f!important;}
-footer {
-    position: fixed;
-    height: 75px;
-    bottom: 0;
-    width: 100%;
-    background-color: #181818;
+.noLiveMatches {
+    color: #fff;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: center;
 }
 
-.card-block {background-color: #212121;
-  color: white;}
-  .list-group-item {    background-color: #fff;
-    margin-top: 1px !important;
-    border:none!important;}
+.noLiveMatches span {
+  font-size:10px;
+  font-weight: 100;
+}
+.navbar {padding:0!important;}
+.divider {margin-left:5px; margin-right:5px;}
+.newsTicker {color:#fff; display: inline-block;font-size: 12px;}
+.newsMarquee {margin-top:-15px;}
+.simple-marquee-container *{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+  font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.simple-marquee-container {
+  width: 100%;
+  background-color: #181818;
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+}
 
-  .card {    background-color: #24387f!important;}
+.simple-marquee-container .marquee-sibling {
+  padding: 0;
+  background-color: #303030;
+  width: 27%;
+  height: 45px;
+  line-height: 42px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+  position:absolute;
+  z-index: 2000;
+}
 
-  .mapPreview {    background-color: #1d1d1d !important;
+.container-fluid {
+  margin-bottom: 100px;
+}
+
+/*.simple-marquee-container .marquee, .simple-marquee-container *[class^="marquee"] {
+  display: inline-block;
+  white-space: nowrap;
+  position:absolute;
+}
+
+.simple-marquee-container .marquee{
+  margin-left: 25%;
+}*/
+
+.teamLose {
+  color:#ff5656;
+}
+
+.teamWon {
+  color:#5be85b;
+  font-weight: 900;
+}
+
+.circleLogo {
+  width: 10%;
+  margin: 0 auto;
+}
+.navibar {
+    background-color: #181818;
+    /* position: fixed; */
+    top: 0px;
+    height: 45px;
+    margin-top: -25px;
+    margin-bottom: 40px;
+}
+.loadingIcon {
+  font-size: 30px;
+  text-align: center;
+}
+.loadingText {  
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+  top: -20px;
+}
+.table-dark {
+  opacity: 0.9;
+  margin-top: 20px;
+}
+.iconExplanation {
+  font-size: 10px;
+}
+.form-control {
+  font-size: 15px!important;
+}
+a {
+  color: #ef405f!important;
+}
+footer {
+  position: fixed;
+  height: 75px;
+  bottom: 0;
+  width: 100%;
+  background-color: #181818;
+}
+
+.card-block {
+  background-color: #212121;
+  color: white;
+}
+.list-group-item {    
+  background-color: #fff;
+  margin-top: 1px !important;
+  border:none!important;}
+
+  .card {    
+    background-color: #24387f!important;
+  }
+
+  .mapPreview {    
+    background-color: #1d1d1d !important;
     color: white;}
 
     .mapPreview img {width:100%;}
-    .mapPreview {font-size: 12px;
+    .mapPreview {
+      font-size: 12px;
       text-align: center;}
 
       .table {
@@ -81,6 +190,9 @@ footer {
 
     html, body {
       height: 100%;
+      background-image: url(bg.jpg);
+      background-size: cover;
+      background-position: 66% 100%;
     }
 
 
@@ -202,7 +314,7 @@ footer {
     .search { position: relative; }
     .search .fa-times { 
       position: absolute;
-     top: 6px;
-    font-size: 25px;
+      top: 6px;
+      font-size: 25px;
       right: 10px;
     }
